@@ -1,4 +1,4 @@
-### Lithium Projesi
+# Lithium Projesi
 ## Genel Bakış
 
 Lithium, güvenlik ve performans odaklı minimal bir Windows optimizasyon projesidir.
