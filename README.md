@@ -1,9 +1,12 @@
 ---
-<a href="https://senin-linkin.com/Lithium.zip">
-  <img src="https://img.shields.io/badge/Download-Lithium-darkred?style=for-the-badge&logo=windows" alt="Download Lithium"/>
-</a>
+
+<p align="center">
+  <a href="https://senin-linkin.com/Lithium.zip">
+    <img src="https://img.shields.io/badge/⬇️%20Download-Lithium-bordo?style=for-the-badge&logo=windows" alt="Download Lithium"/>
+  </a>
+</p>
+
 ---
-TR:
 
 # Lithium Projesi
 ## Genel Bakış
@@ -74,7 +77,6 @@ Lithium, yalnızca teknik bir araç değil; aynı zamanda minimalizm, güvenlik 
 Otomasyon, dokümantasyon ve metodoloji birleşimiyle kullanıcıya hafif, güvenilir ve geleceğe hazır Windows ortamları sunar.
 
 ---
-# EN:
 
 # Lithium Project
 ## Overview
