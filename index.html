@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lithium Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin:0; background:#f9f9f9; color:#333; }
+    header { background:#800000; color:white; padding:20px; text-align:center; font-family:'Montserrat', sans-serif; }
+    nav a { margin:0 15px; color:white; text-decoration:none; font-weight:bold; }
+    .hero { text-align:center; padding:60px 20px; }
+    .hero h1 { font-family:'Montserrat', sans-serif; font-size:42px; color:#800000; }
+    .download { margin-top:30px; }
+    .download a img { height:60px; }
+    .download p { margin-top:10px; font-size:14px; color:#555; }
+    section { padding:40px 20px; max-width:900px; margin:auto; }
+    h2 { font-family:'Montserrat', sans-serif; color:#800000; margin-bottom:20px; }
+    ul { line-height:1.8; }
+    /* Responsive */
+    @media (max-width:768px) {
+      .hero h1 { font-size:28px; }
+      .download a img { height:50px; }
+    }
+    /* Dil butonları */
+    .lang-switch { margin-top:20px; }
+    .lang-switch button { margin:0 5px; padding:8px 12px; border:none; background:#800000; color:white; cursor:pointer; border-radius:4px; }
+    /* Footer */
+    footer { background:#800000; color:white; text-align:center; padding:20px; margin-top:40px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lithium Project</h1>
+    <nav>
+      <a href="#neden">Neden Lithium</a>
+      <a href="#gereksinimler">Sistem Gereksinimleri</a>
+      <a href="#neler">Neler Yapıldı</a>
+      <a href="#download">İndir</a>
+      <a href="#license">Lisans</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Minimal, Güvenli ve Performans Odaklı</h1>
+    <p>Lithium, güvenlik ve performans odaklı minimal Windows optimizasyon projesidir.</p>
+    <div class="download" id="download">
+      <a href="https://senin-linkin.com/Lithium.zip">
+        <img src="https://img.shields.io/badge/⬇️%20Download-Lithium-bordo?style=for-the-badge&logo=windows" alt="Download Lithium"/>
+      </a>
+      <p>Kısa açıklama: Optimize edilmiş Windows deneyimi için Lithium’u indir.</p>
+    </div>
+    <div class="lang-switch">
+      <button onclick="setLang('tr')">Türkçe</button>
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('az')">Azərbaycanca</button>
+    </div>
+  </div>
+
+  <section id="neden">
+    <h2>Neden Lithium</h2>
+    <p>Gereksiz bileşenlerden arındırılmış, güvenli ve hızlı bir Windows ortamı sunar. Minimalizm ve sürdürülebilirlik felsefesiyle tasarlanmıştır.</p>
+  </section>
+
+  <section id="gereksinimler">
+    <h2>Sistem Gereksinimleri</h2>
+    <ul>
+      <li>Windows 10/11 uyumlu sistem</li>
+      <li>En az 4 GB RAM</li>
+      <li>20 GB boş disk alanı</li>
+      <li>Sanal makine (test için önerilir)</li>
+    </ul>
+  </section>
+
+  <section id="neler">
+    <h2>Neler Yapıldı</h2>
+    <ul>
+      <li>Registry optimizasyonları</li>
+      <li>Performans testleri</li>
+      <li>Gereksiz servislerin kaldırılması</li>
+      <li>İki dilli dokümantasyon</li>
+    </ul>
+  </section>
+
+  <footer id="license">
+    <p>📜 Bu proje MIT Lisansı ile lisanslanmıştır.  
+    Lithium’u kullanabilir, değiştirebilir ve dağıtabilirsiniz; tek şart uygun atıf yapmaktır.</p>
+  </footer>
+
+  <script>
+    const texts = {
+      tr: {
+        heroTitle: "Minimal, Güvenli ve Performans Odaklı",
+        heroDesc: "Lithium, güvenlik ve performans odaklı minimal Windows optimizasyon projesidir.",
+        neden: "Gereksiz bileşenlerden arındırılmış, güvenli ve hızlı bir Windows ortamı sunar.",
+        downloadDesc: "Optimize edilmiş Windows deneyimi için Lithium’u indir.",
+        license: "📜 Bu proje MIT Lisansı ile lisanslanmıştır."
+      },
+      en: {
+        heroTitle: "Minimal, Secure and Performance-Oriented",
+        heroDesc: "Lithium is a minimal Windows optimization project focused on security and performance.",
+        neden: "Provides a secure and fast Windows environment stripped of unnecessary components.",
+        downloadDesc: "Download Lithium for an optimized Windows experience.",
+        license: "📜 This project is licensed under the MIT License."
+      },
+      az: {
+        heroTitle: "Minimal, Təhlükəsiz və Performans Yönümlü",
+        heroDesc: "Lithium təhlükəsizlik və performans yönümlü minimal Windows optimizasiya layihəsidir.",
+        neden: "Artıq komponentlərdən təmizlənmiş, təhlükəsiz və sürətli Windows mühiti təqdim edir.",
+        downloadDesc: "Optimallaşdırılmış Windows təcrübəsi üçün Lithium-u yüklə.",
+        license: "📜 Bu layihə MIT Lisenziyası ilə lisenziyalaşdırılıb."
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelector(".hero h1").innerText = texts[lang].heroTitle;
+      document.querySelector(".hero p").innerText = texts[lang].heroDesc;
+      document.querySelector("#neden p").innerText = texts[lang].neden;
+      document.querySelector(".download p").innerText = texts[lang].downloadDesc;
+      document.querySelector("#license p").innerText = texts[lang].license;
+    }
+  </script>
+</body>
+</html>
